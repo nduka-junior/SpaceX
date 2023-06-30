@@ -2,9 +2,8 @@
 
 ##### some progress from the app right now
 
-![Rockets page](rockets.png)
-![Rocket page](rocket.png)
-![Launches page](launches.png)
+![Rockets page](https://github.com/nduka-junior/SpaceX/blob/main/public/rockets.png)
+![Rocket page](https://github.com/nduka-junior/SpaceX/blob/main/public/rocket.png)
+![Launches page](https://github.com/nduka-junior/SpaceX/blob/main/public/launches.png)
 
-
-### *We are not affiliated, associated, authorized, endorsed by, or in any way officially connected with Space Exploration Technologies Corp (SpaceX), or any of its subsidiaries or its affiliates. The names SpaceX as well as related names, marks, emblems and images are registered trademarks of their respective owners.*
+##### _We are not affiliated, associated, authorized, endorsed by, or in any way officially connected with Space Exploration Technologies Corp (SpaceX), or any of its subsidiaries or its affiliates. The names SpaceX as well as related names, marks, emblems and images are registered trademarks of their respective owners._
