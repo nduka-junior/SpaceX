@@ -26,10 +26,10 @@ async function page() {
           return (
             <div className="my-5 pr-5 flex flex-col ">
               <RocketItem key={id} rocket={rocket} />
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center mt-3">
                 <h2
                   className="text-2xl 
-                text-white hover:text-slate-300"
+                text-blue hover:text-slate-300"
                 >
                   {rocket.name}
                 </h2>
