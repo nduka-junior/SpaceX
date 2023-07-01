@@ -74,9 +74,9 @@ export default function Tabs({ rocket }) {
           </div>
         </TabPanel>
         <TabPanel value="3">
-                  {rocket.payload_weights.map(payloads => {
+          {rocket.payload_weights.map((payloads,id) => {
             return (
-              <div className="flex justify-between mb-3 border-b-[1px] pb-4 border-[#1976d2]">
+              <div key={id} className="flex justify-between mb-3 border-b-[1px] pb-4 border-[#1976d2]">
                 <h1 className="text-[14px] capitalize">
                   {payloads.name}
                   <span> #{payloads.id}</span>
@@ -87,8 +87,7 @@ export default function Tabs({ rocket }) {
                 </h2>
               </div>
             );
-        })}
-          
+          })}
         </TabPanel>
       </TabContext>
     </Box>

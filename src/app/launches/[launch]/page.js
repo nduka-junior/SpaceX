@@ -1,20 +1,25 @@
+"use client";
 import Icons from "@/components/Icons";
+import ImageGallery from "@/components/ImageGallery";
 import formatDate from "@/lib/date";
 import getlaunch from "@/lib/getLaunch/getLaunch";
 import getRocket from "@/lib/getRocket/getRocket";
 import Image from "next/image";
 import Link from "next/link";
+import * as React from "react";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 async function page({ params }) {
   const launch = await getlaunch(params.launch);
   const rocket = await getRocket(launch.rocket);
   return (
-    <div className="bg-mainBg  grid grid-cols-2 text-white p-5 ">
+    <div className="bg-mainBg  grid grid-cols-2 text-white p-10 ">
       <div className="max-md:col-span-2">
         <h2 className="text-3xl text-blue">{launch.name}</h2>
         <div className="text-[10px]">{formatDate(launch.date_utc)}</div>
-        <h2 className="text-sm my-5">{launch.details}</h2>
+        <h2 className="text-[16px] my-5">{launch.details}</h2>
         <h2 className="text-sm">
           Rocket used:
           <span className="text-blue">
@@ -41,14 +46,26 @@ async function page({ params }) {
           article={launch.links.article}
         />
       </div>
-      <div className=" flex justify-center">
-        <Image
-          style={{ height: "100%!important" }}
-          src={launch.links.patch.large}
-          width={200}
-          height={200}
-          alt={launch.links.patch.name}
-        />
+      <div className="pt-5   max-md:col-span-2 md:ml-5">
+        {
+          <ImageList
+            sx={{ width: "100%", height: "90vh" }}
+            rowHeight={"auto"}
+            className="max-sm:!grid-cols-2  lg:!grid-cols-3"
+          >
+            {launch.links.flickr.original.map((item, id) => (
+              <ImageListItem key={id}>
+                <img
+                  src={`${item}?w=164&h=164&fit=crop&auto=format`}
+                  srcSet={`${item}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  loading="lazy"
+                  className="m"
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        }
       </div>
     </div>
   );

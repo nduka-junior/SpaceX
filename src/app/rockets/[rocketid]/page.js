@@ -10,7 +10,7 @@ async function page({params} ) {
     
   return (
     <div className=" p-10 grid grid-cols-2 max-md:grid-cols-1  gap-2  lg:h-[95vh]   bg-[#060606f1] h-[auto]">
-      <div className=" max-md:mt-4">
+      <div className="  max-md:mt-4">
         <ImageGallery images={rocket.flickr_images} />
       </div>
       {/* 1c1c1c 2f2f31 */}

@@ -20,15 +20,15 @@ import React from "react";
 import Image from "next/image";
 function ImageGallery({ images }) {
   return (
-    <div className="grid  grid-cols-2 justify-center  gap-4 lg:grid-cols-2 md:grid-cols-1 w-100  ">
-      {images.map((image) => {
+    <div className="grid  grid-cols-2 justify-center  gap-4 lg:grid-cols-2 md:grid-cols-1   max-h-[85vh] overflow-y-scroll ">
+      {images.map((image,id) => {
         return (
-          <div className=" grid  ">
+          <div className=" grid" key={id}>
             <Image
               src={image}
               style={{ width: "100%!important", height: "100%" }}
-              width={300}
-              height={300}
+              width={400}
+              height={400}
               alt={image}
             />
           </div>

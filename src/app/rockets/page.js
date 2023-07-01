@@ -24,8 +24,8 @@ async function page() {
       <div className="grid grid-cols-1 h-full xl:h-[93vh] sm:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4   ">
         {rockets.map((rocket, id) => {
           return (
-            <div className="my-5 pr-5 flex flex-col ">
-              <RocketItem key={id} rocket={rocket} />
+            <div key={id} className="my-5 pr-5 flex flex-col ">
+              <RocketItem rocket={rocket} />
               <div className="flex justify-between items-center mt-3">
                 <h2
                   className="text-2xl 
