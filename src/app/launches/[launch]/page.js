@@ -13,9 +13,11 @@ import ImageListItem from "@mui/material/ImageListItem";
 // import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 async function page({ params }) {
   const launch = await getlaunch(params.launch);
+  console.log(launch);
+
   const rocket = await getRocket(launch.rocket);
   return (
-    <div className="bg-mainBg  grid grid-cols-2 text-white p-10 ">
+    <div className="  grid grid-cols-2 text-white p-10 ">
       <div className="max-md:col-span-2">
         <h2 className="text-3xl text-blue">{launch.name}</h2>
         <div className="text-[10px]">{formatDate(launch.date_utc)}</div>
@@ -46,27 +48,29 @@ async function page({ params }) {
           article={launch.links.article}
         />
       </div>
-      <div className="pt-5   max-md:col-span-2 md:ml-5">
-        {
-          <ImageList
-            sx={{ width: "100%", height: "90vh" }}
-            rowHeight={"auto"}
-            className="max-sm:!grid-cols-2  lg:!grid-cols-3"
-          >
-            {launch.links.flickr.original.map((item, id) => (
-              <ImageListItem key={id}>
-                <img
-                  src={`${item}?w=164&h=164&fit=crop&auto=format`}
-                  srcSet={`${item}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  loading="lazy"
-                  className="m"
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
-        }
-      </div>
+      {
+        <div className="pt-5   max-md:col-span-2 md:ml-5">
+          {launch.links.flickr.original.length > 0 && (
+            <ImageList
+              sx={{ width: "100%", height: "90vh" }}
+              rowHeight={"auto"}
+              className="max-sm:!grid-cols-2  lg:!grid-cols-3"
+            >
+              {launch.links.flickr.original.map((item, id) => (
+                <ImageListItem key={id}>
+                  <img
+                    src={`${item}?w=164&h=164&fit=crop&auto=format`}
+                    srcSet={`${item}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                    alt={item.title}
+                    loading="lazy"
+                    className="m"
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
+          )}
+        </div>
+      }
     </div>
   );
 }

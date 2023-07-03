@@ -1,9 +1,8 @@
 import React from "react";
-import Image from "next/image";
 import ImageSlider from "./ImageSlider";
 function RocketItem({ rocket }) {
   return (
-    <div className="">
+    <div >
       {/* <Image
         src={rocket.flickr_images[0]}
         alt={rocket.name}

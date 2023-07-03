@@ -6,7 +6,7 @@ import { useState } from "react";
 
 function Nav() {
   const [text, setText] = useState("");
-  console.log(text);
+  console.log(text)
   return (
     <nav className="flex justify-between p-4 items-center bg-[#000000] shadow-2xl shadow-[#fffff]-600/70 ">
       <Link href="/">

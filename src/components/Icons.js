@@ -1,8 +1,9 @@
-import React from "react";
+"use client"
 
-import {} from "@fortawesome/free-solid-svg-icons";
+
+
 function Icons({ youtube, wikipedia, article }) {
-  console.log(youtube);
+
   return (
     <div className="flex items-center  text-white mt-3 ">
       <a href={youtube} target="_blank">
