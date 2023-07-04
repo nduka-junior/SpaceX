@@ -1,7 +1,5 @@
-"use client";
 import formatDate from "@/lib/date";
 import getlaunces from "@/lib/getLaunch/getLaunches";
-import { useState, useCallback, useRef } from "react";
 import Image from "next/image";
 import Icons from "@/components/Icons";
 import Link from "next/link";
@@ -12,6 +10,7 @@ import Link from "next/link";
 // rocket
 // flicker
 // links
+
 async function page() {
   const launches = await getlaunces();
 
@@ -22,7 +21,7 @@ async function page() {
       </h1>
       {launches.slice(0, 100).map((launch) => {
         return launch.details != null && launch.links.patch.large != null ? (
-          <div className="hover:bg-[#1c1c1c]  hover:scale-105  bg-[#2f2f31]  hover:ease-in  px-6 py-8  mb-4 duration-300">
+          <div key={launch.id} className="hover:bg-[#1c1c1c]  hover:scale-105  bg-[#2f2f31]  hover:ease-in  px-6 py-8  mb-4 duration-300">
             <Link href={launch.id ? `/launches/${launch.id}` : ""}>
               <div className=" flex justify-start items-start  max-sm:flex-column w-[auto]">
                 <div>
