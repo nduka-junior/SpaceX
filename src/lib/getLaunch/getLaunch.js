@@ -1,6 +1,6 @@
 export default async function getlaunch(id) {
   const getlaunch = await fetch(`https://api.spacexdata.com/v5/launches/${id}`);
-  // console.log(getlaunch, "getlaunch");
+
   if (getlaunch.ok ==false) {
     return { 
         notFound: true,

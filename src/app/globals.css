@@ -22,3 +22,6 @@ body {
     width: 100% !important;
   }
 }
+
+#map { height: 300px;
+width: 100vw; }
