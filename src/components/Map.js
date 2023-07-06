@@ -40,6 +40,7 @@ async function Map() {
     return (
    
         <MapContainer
+            preferCanvas={true}
           center={{ lat: 51.505, lng: -0.09 }}
           zoom={10}
           scrollWheelZoom={false}
