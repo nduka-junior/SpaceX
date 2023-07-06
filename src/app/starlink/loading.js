@@ -3,7 +3,6 @@ import React from "react";
 import Stack from "@mui/material/Stack";
 import LinearProgress from "@mui/material/LinearProgress";
 import { blue } from "@mui/material/colors";
-import { CircularProgress } from "@mui/material";
 
 function Loading() {
   const colorBlue = blue[700];
