@@ -23,7 +23,7 @@ async function Map() {
   // const starlinks = data;
   const filterStarlinks = starlinks.filter((starlink) => {
     return starlink.longitude !== null && starlink.latitude !== null;
-  });
+  }).slice(0, 100);
   function LocationMarker() {
     const [position, setPosition] = useState(null);
     const map = useMapEvents({
@@ -37,17 +37,18 @@ async function Map() {
     });
 
     return position === null ? null : (
-      <Marker position={position} icon={myIcon}>
+      <Marker position={position}>
         <Popup>You are here</Popup>
       </Marker>
     );
   }
-
+    const getRandCenter = filterStarlinks[Math.floor(Math.random() * filterStarlinks.length)];
+    const randCenter = [getRandCenter.latitude, getRandCenter.longitude]
   return (
     <MapContainer
       preferCanvas={true}
-      center={{ lat: 51.505, lng: -0.09 }}
-      zoom={10}
+      center={randCenter}
+      zoom={3}
       scrollWheelZoom={false}
       style={{ height: "85vh", width: "100vw" }}
     >
@@ -58,7 +59,7 @@ async function Map() {
 
       <LocationMarker />
 
-      {filterStarlinks.slice(0, 400).map((starlink, index) => {
+      {filterStarlinks.map((starlink, index) => {
         return (
           <div key={index}>
             <Marker
