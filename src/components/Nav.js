@@ -2,14 +2,11 @@
 
 import Link from "next/link";
 import React from "react";
-import { useState } from "react";
 
 function Nav() {
-  const [text, setText] = useState("");
-  console.log(text);
   return (
     <nav className="flex justify-between p-4 items-center bg-[#000000] shadow-2xl shadow-[#fffff]-600/70 ">
-      <Link href="/">
+      <Link href="/" className="w-[100%]">
         <svg
           version="1.1"
           x="0px"
@@ -77,14 +74,17 @@ function Nav() {
           </g>
         </svg>
       </Link>
-      <div className="text-black  ">
-        <input
-          type="text"
-          placeholder="Search"
-          className="ml-2 rounded  p-1 outline-none w-[100%]"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
+
+      <div className=" w-[100%] text-xl max-sm:text-sm text-white flex list-none justify-between   items-center">
+        <li className="hover:text-blue underlineCustom ">
+          <Link href={"./launches"}>Launches</Link>
+        </li>
+        <li className="hover:text-blue underlineCustom">
+          <Link href={"./rockets"}>Rockets</Link>
+        </li>
+        <li className="hover:text-blue  underlineCustom">
+          <Link href={"./starlink"}>Starlink</Link>
+        </li>
       </div>
     </nav>
   );

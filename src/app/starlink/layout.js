@@ -1,4 +1,8 @@
 import Script from "next/script";
+
+export const metadata = {
+  title: "Starlink",
+};
 function layout({ children }) {
   return (
     <div>

@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
 
-function layout({children}) {
-  return <div className="bg-mainBg">{children}</div>;
+export const metadata = {
+  title: ` SpaceX Launches`,
+};
+function layout({ children }) {
+  return <div>{children}</div>;
 }
 
-export default layout
+export default layout;

@@ -1,15 +1,22 @@
 @tailwind base;
-img {
-
-
-
-}
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "D-DIN";
+  src: url("../lib/font/d-din/D-DIN.otf");
+}
+@font-face {
+  font-family: "D-DIN-Italic";
+  src: url("../lib/font/d-din/D-DIN-Italic.otf");
+}
+@font-face {
+  font-family: "D-DIN-Bold";
+  src: url("../lib/font/d-din/D-DIN-Bold.otf");
+}
 body {
   max-width: 100vw !important;
-  font-family: sans-serif;
+  font-family: D-DIN, sans-serif;
 }
 .rsis-image {
   background-size: cover !important;
@@ -23,5 +30,24 @@ body {
   }
 }
 
-#map { 
-width: 100vw; }
+#map {
+  width: 100vw;
+}
+.underlineCustom {
+  position: relative;
+  padding-bottom: 2px;
+}
+.underlineCustom::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border-bottom: 3px solid #1976d2;
+  width: 0%;
+  bottom: 0;
+  transition: all 0.45s ease-in-out;
+  left: 0;
+  transform-origin: bottom right;
+}
+.underlineCustom:hover::before {
+  width: 100%;
+}

@@ -4,6 +4,16 @@ import Tabs from "@/components/Tab";
 import getRocket from "@/lib/getRocket/getRocket";
 
 
+export async function generateMetadata({ params,  }) {
+  // read route params
+  const id = params.rocketid;
+
+
+  // return a dynamic title
+  return {
+    title: `Rocket - ${id}`,
+  };
+}
 async function page({params} ) {
   const rocket = await getRocket(params.rocketid);
   

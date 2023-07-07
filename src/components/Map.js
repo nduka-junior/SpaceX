@@ -23,7 +23,7 @@ async function Map() {
   // const starlinks = data;
   const filterStarlinks = starlinks.filter((starlink) => {
     return starlink.longitude !== null && starlink.latitude !== null;
-  }).slice(0, 100);
+  }).slice(100, 400);
   function LocationMarker() {
     const [position, setPosition] = useState(null);
     const map = useMapEvents({
