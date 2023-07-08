@@ -5,7 +5,7 @@ import React from "react";
 
 function Nav() {
   return (
-    <nav className="flex justify-between p-4 items-center bg-[#000000] shadow-2xl shadow-[#fffff]-600/70 ">
+    <nav className="flex justify-between items-center bg-[#000000] shadow-2xl shadow-[#fffff]-600/70 ">
       <Link href="/" className="w-[100%]">
         <svg
           version="1.1"
@@ -75,7 +75,7 @@ function Nav() {
         </svg>
       </Link>
 
-      <div className=" w-[100%] text-xl max-sm:text-sm text-white flex list-none justify-between   items-center">
+      <div className=" w-[100%]  p-4  text-xl max-sm:text-sm text-white flex list-none justify-between items-cneter">
         <li className="hover:text-blue underlineCustom ">
           <Link href={"./launches"}>Launches</Link>
         </li>

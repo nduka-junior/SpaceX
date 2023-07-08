@@ -11,7 +11,7 @@ export default function Home() {
             </h1>
 
             <Link
-              className="p-4 ease-in-out duration-300 hover:bg-[#3433333b]  !w-[60%] border-white border-[2px]
+              className="p-4 ease-in-out duration-300 hover:bg-[#3433333b]  !w-[75%] text-center border-white border-[2px]
             border-solid  text-xl max-sm:text-xs mt-3"
               href={"./launches"}
             >
@@ -26,11 +26,10 @@ export default function Home() {
             </h1>
 
             <Link
-              className="p-4 ease-in-out duration-300 hover:bg-[#3433333b]  !w-[60%] border-white border-[2px]
+              className="p-4 ease-in-out duration-300 hover:bg-[#3433333b]  !w-[75%] border-white border-[2px] text-center 
             border-solid  text-xl max-sm:text-xs mt-3"
               href={"./rockets"}
             >
-              
               View Rockets {">>>"}
             </Link>
           </div>
@@ -42,11 +41,11 @@ export default function Home() {
             </h1>
 
             <Link
-              className="p-4 ease-in-out duration-300 hover:bg-[#3433333b]  !w-[60%] border-white border-[2px]
+              className="p-4 ease-in-out duration-300 hover:bg-[#3433333b]  !w-[75%] border-white border-[2px] text-center 
             border-solid  text-xl max-sm:text-xs mt-3"
               href={"./starlink"}
             >
-             Starlink Map {">>>"}
+              Starlink Map {">>>"}
             </Link>
           </div>
         </div>

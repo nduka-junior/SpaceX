@@ -1,4 +1,5 @@
 # A **NEXTJS APP** built using a [SpaceX api](https://github.com/r-spacex/SpaceX-API/tree/master)
+### Project Link [https://space-x2-wheat.vercel.app/](https://space-x2-wheat.vercel.app/)
 
 ### some progress from the app right now
 ## Rockets page
