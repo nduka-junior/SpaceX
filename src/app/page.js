@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <div>
-        <div className="bg-[url('../static/launch.jpeg')] h-[90vh] text-white bg-no-repeat bg-center  bg-cover relative">
+        <div className=" z-10 shadow-[0px_16px_33px_-8px_rgba(0,0,0,0.3)] bg-[url('../static/launch.jpeg')] h-[90vh] text-white bg-no-repeat bg-center  bg-cover relative">
           <div className="  flex  flex-col justify-between  mx-[50px] absolute bottom-[40%] ">
             <h1 className="text-5xl tracking-wider max-sm:text-3xl">
               SpaceX Launch
@@ -19,7 +19,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="bg-[url('../static/rocket.jpeg')] h-[90vh] text-white bg-no-repeat bg-center  bg-cover relative">
+        <div className="z-9 shadow-[0px_16px_33px_-8px_rgba(0,0,0,0.3)] bg-[url('../static/rocket.jpeg')] h-[90vh] text-white bg-no-repeat bg-center  bg-cover relative">
           <div className="  flex  flex-col justify-between  mx-[50px] absolute bottom-[40%] ">
             <h1 className="text-5xl tracking-wider max-sm:text-3xl">
               SpaceX Rocket
